@@ -1,0 +1,51 @@
+Homework 2 Assessment
+
+3. make_matcher being able to write a solution is due in large part to the
+hint at the bottom of the specification and the discussion slides (which 
+talked about which parts of the hint solution to focus on when writing my
+function). Therefore, I was largely able to model my implementation from the
+make_or_matcher and make_appended_matcher functions. With that said, 
+make_matcher implements a backtracking approach, which attempts to DFS from
+the current nonterminal (and inspect the alternative list from left to right) 
+to  try to find an acceptable prefix match. If at any point, the DFS from the 
+original nonterminal symbol doesn't yield a prefix match, then we backtrack 
+to  try  subsequent rules in the alternative list. The make_matcher function 
+calls two mutually recursive helper functions to (1) explore the current 
+nonterminal alternative list, and (2) explore the rule list of a nonterminal 
+symbol to  match with the fragment.
+
+4. make_parser -- my make_parser implementation never called make_matcher in
+its execution. However, I did largely use my make_matcher solution (with 
+slight modifications) as a helper function to retrieve the derivation of the 
+input fragment. The modification in the make_matcher function involved using 
+a custom acceptor, which parsed the rule list of a given nonterminal symbol 
+in the same manner in order to recursively (via DFS and backtracking) produce
+the derivation. Using the derivation from a given fragment, I constructed the
+parse tree by utilizing two mutually recursive helper functions to perform 
+DFS to build out the parse tree from nonterminal symbols in a similar DFS 
+fashion as the make_matcher function. Basically, when arriving at a 
+nonterminal symbol, inspect the associated rule list from left to right. For 
+each additional nonterminal symbol encountered in the current nonterminal 
+symbol's rule list, DFS from that point to attain the associated subtree and 
+then DFS other elems in that same rule list to retrieve sibling subtrees from 
+the same parent node. When encountering terminal symbols, the idea is to 
+construct a leaf object and then to DFS the other rules in the rule list to
+obtain any additional paths to any additional leaves stemming from a given
+nonterminal symbol. 
+
+When writing some test cases for the make_parser function, I encountered a 
+weakness (i.e. a situation where execution of the make_parser function gets 
+stuck in an infinite loop) for certain grammars. This is the case when a 
+grammar consists of a nonterminal symbol that calls itself as a part of one 
+of the rules in its alternative list. In this case, my program fails and gets 
+stuck in an infinite loop where I got this error: "Stack overflow during 
+evaluation (looping  recursion?)." From the discussion slides and in 
+discussion, it was too my understanding that our make_parser function only 
+had to handle context-free grammars (that don't include infinite loops) and 
+not regular grammars. For this reason and due to time constraints, I didn't 
+implement a make_parser function to handle regular grammars and just 
+context-free grammars. Another weakness of my make_parser code is code 
+duplication. As I couldn't really think of how to directly call the 
+make_matcher function in my make_parser function, in order to obtain the 
+derivation from a given fragment, I largely rewrote my make_matcher function 
+with slight modifications. 

@@ -1,0 +1,15 @@
+References:
+- TA on Piazza said it is okay to use existing implementations of transpose
+  - Source: https://stackoverflow.com/questions/4280986/how-to-transpose-a-matrix-in-prolog
+- For my plain_tower implementation, utilized some code from Week 6 TA discussion slides
+
+Speedup:
+- Test: tower(4, _, counts([4,3,2,1],[1,2,2,2],[4,3,2,1],[1,2,2,2]))
+- Ratio: 40x speedup
+
+Ambiguous:
+- Test: tower(4, T, C)
+- First ambiguous puzzle:
+  C = counts([4,2,2,1],[1,2,2,4],[4,2,2,1],[1,2,2,4])
+  T1 = [[1,2,3,4],[2,1,4,3],[3,4,1,2],[4,3,2,1]]
+  T2 = [[1,2,3,4],[2,4,1,3],[3,1,4,2],[4,3,2,1]]

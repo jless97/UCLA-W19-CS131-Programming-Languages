@@ -1,0 +1,21 @@
+Homework 1 Assessment
+
+1. subset -- When approaching this problem, I saw two methods to solve the problem: (1) using a loop (how I would
+have done it in C++) and using recursion (which seemed more natural for OCaml). Using recursion, I recursively 
+checked each element of a one by one to see if it was a subset of b.
+
+2. equal_sets -- To check if two sets are equal, I remembered a simple math concept s.t. if a is a subset of b
+and b is a subset of a, then they must be the same set.
+
+3. set_union -- At first, I was going to just use the List.append function to solve this, but I wanted to somehow
+approach the problem of duplicate values in the resulting set. Naturally, I used recursion to check if b already
+contained the curr elem of a, and if it did, then skip it.
+
+4. set_intersection -- I wrote two simple helper functions to check if an elem is present in a list and if an elem is not present in a list. Using the first helper function, I utilized the very helpful List.filter function to check if set b contained each elem of set a.
+
+5. set_diff -- Same as set_intersection, except I utilized the second helper function to check if set b did not contain the elem of set a.
+
+6. computed_fixed_point -- From the computed fixed point definition, it was obvious that recursion was the simplest approach to write this method.
+
+7. filter_reachable -- This problem was rather tricky to approach as I spent some time trying to figure out all of
+the terminology and running through a couple of examples. I then realized that a graph-based approach could be applied to this problem. Typical graph problems most commonly using BFS or DFS. I opted for BFS as it was more natural for me to write as each iteration could be thought of as reaching one level down in the graph from the current list of non-terminal nodes, and so on. Writing the function however in OCaml was tricky (and new) for me, and I decided to break it down into many sub-functions to make it easier for me to digest.

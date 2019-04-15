@@ -1,0 +1,11 @@
+2019-03-10 19:02:18,968 INFO Serving server Holiday on ('127.0.0.1', 11762)
+2019-03-10 19:02:23,486 INFO Connection made: ('127.0.0.1', 59723)
+2019-03-10 19:02:23,487 INFO Data received: 'AT Goloman +32245808.56267023 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman\n'
+2019-03-10 19:02:23,487 INFO Attempting to flood client info: AT Goloman +32245808.56267023 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday
+
+2019-03-10 19:02:23,488 INFO Connection lost: ('127.0.0.1', 59723)
+2019-03-10 19:02:23,489 INFO Success: Flooded data to Welsh
+2019-03-10 19:02:23,490 INFO Success: Flooded data to Wilkes
+2019-03-10 19:02:23,490 INFO Connection made: ('127.0.0.1', 59729)
+2019-03-10 19:02:23,492 INFO Data received: 'AT Goloman +32245808.56267023 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Wilkes\n'
+2019-03-10 19:02:23,492 INFO Connection lost: ('127.0.0.1', 59729)

@@ -1,0 +1,6 @@
+2019-03-10 19:02:18,982 INFO Serving server Welsh on ('127.0.0.1', 11763)
+2019-03-10 19:02:23,489 INFO Connection made: ('127.0.0.1', 59726)
+2019-03-10 19:02:23,489 INFO Data received: 'AT Goloman +32245808.56267023 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday\n'
+2019-03-10 19:02:23,490 INFO Attempting to flood client info: AT Goloman +32245808.56267023 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Welsh
+
+2019-03-10 19:02:23,490 INFO Connection lost: ('127.0.0.1', 59726)
