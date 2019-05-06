@@ -1,4 +1,4 @@
-# CS131 - Programming Languages, Winter 2019  
+# CS131 - Programming Languages, Winter 2019
 
 ## Course Objective
 Expose the student to an analytic and comparative way of looking at programming languages and their implementation.
